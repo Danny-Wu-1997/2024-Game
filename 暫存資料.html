@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>暫存資料</title>
+</head>
+<body>
+    <script>
+        result.innerText +=`displayText <br>`;
+
+        function displayText() {
+            // 取得使用者輸入的文字
+            const inputText = document.getElementById('inputText').value;
+            // 顯示在畫面上
+            document.getElementById('display').innerText = inputText;
+            const currentText = document.getElementById('display').innerText; 
+            document.getElementById('display').innerText = currentText + '\n' + inputText;
+        }
+
+           localStorage.setItem('key', 'value');
+        
+    </script>
+    
+    <div class="box"></div>
+    <h1>寫些東西</h1> 
+    <input type="text" id="inputText" placeholder="輸入一些文字"> 
+    <button onclick="displayText()">送出</button> 
+    <p id="display"></p> 
+</body>
+</html>
